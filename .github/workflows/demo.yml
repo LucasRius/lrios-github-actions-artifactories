@@ -29,8 +29,8 @@ jobs:
         run: npm run build
       - name: Publish JS Filename
         id: publish
-        run: find dis/assets/*.js -type f -execdir echo 'file-maroto={}' >> $GITHUB_OUTPUT ';'
-        # run: find dis/assets/*.js -type f -execdir echo '::set-output name=file-maroto::{}' ';'
+        run: find dist/assets/*.js -type f -execdir echo 'file-maroto={}' >> $GITHUB_OUTPUT ';'
+        # run: find dist/assets/*.js -type f -execdir echo '::set-output name=file-maroto::{}' ';'
       - name: Upload Artifacts
         uses: actions/upload-artifact@v4
         with:
